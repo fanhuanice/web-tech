@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>精选作品 - 我的摄影</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- 导航栏（与主页一致） -->
+    <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href=" " class="text-xl font-bold text-gray-800">我的摄影</a >
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="index.html" class="text-gray-600 hover:text-black">主页</a >
+                    <a href="galleries.html" class="text-gray-600 hover:text-black">照片集</a >
+                    <a href="portfolio.html" class="text-gray-600 hover:text-black">精选作品</a >
+                    <a href="about.html" class="text-gray-600 hover:text-black">关于我</a >
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 精选作品内容（替换照片和说明） -->
+    <div class="pt-24 pb-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 class="text-4xl font-bold text-gray-800 text-center mb-16">精选作品集</h1>
+
+        <!-- 作品1 -->
+        <div class="flex flex-col lg:flex-row gap-8 mb-20">
+            <div class="lg:w-1/2">
+                 <img src="./images/xueshanxingkong.jpeg" alt="雪山星空" class="w-full h-auto rounded shadow">
+            </div>
+            <div class="lg:w-1/2 flex flex-col justify-center">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">雪山星空</h2>
+                <p class="text-gray-600 text-lg mb-4">拍摄于西藏纳木错，凌晨3点等待银河升起，用长曝光捕捉星空与雪山的层次感，ISO 800，曝光时间25秒。</p >
+                <p class="text-gray-500">核心思路：用冷色调突出雪山的纯净，星空的暖光作为点缀，形成视觉对比。</p >
+            </div>
+        </div>
+
+        <!-- 作品2 -->
+        <div class="flex flex-col lg:flex-row-reverse gap-8 mb-20">
+            <div class="lg:w-1/2">
+                 <img src="./images/shanghai.jpeg" alt="城市夜景" class="w-full h-auto rounded shadow">
+            </div>
+            <div class="lg:w-1/2 flex flex-col justify-center">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">城市夜景</h2>
+                <p class="text-gray-600 text-lg mb-4">拍摄于上海外滩，使用三脚架稳定相机，f/8光圈保证景深，捕捉建筑灯光与江面倒影的对称美。</p >
+                <p class="text-gray-500">核心思路：避开人群，选择低角度拍摄，让江面成为“镜子”，延伸画面纵深感。</p >
+            </div>
+        </div>
+
+        <!-- 作品3 -->
+        <div class="flex flex-col lg:flex-row gap-8">
+            <div class="lg:w-1/2">
+                 <img src="./images/beijing.jpeg" alt="秋日落叶" class="w-full h-auto rounded shadow">
+            </div>
+            <div class="lg:w-1/2 flex flex-col justify-center">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">秋日落叶</h2>
+                <p class="text-gray-600 text-lg mb-4">拍摄于北京香山，使用50mm定焦镜头，大光圈虚化背景，聚焦落叶上的露珠，突出细节质感。</p >
+                <p class="text-gray-500">核心思路：用浅景深隔离主体与环境，暖黄色调传递秋日的温柔氛围。</p >
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部版权 -->
+    <footer class="bg-gray-800 text-white py-6 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>© 2024 我的摄影网站 | 保留所有权利</p >
+        </div>
+    </footer>
+</body>
+</html>

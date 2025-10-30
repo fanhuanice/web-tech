@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>照片集 - 我的摄影</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* 照片放大弹窗 */
+        .modal { display: none; position: fixed; top: 0; left: 0; z-index: 100; width: 100%; height: 100%; background: rgba(0,0,0,0.8); }
+        .modal.active { display: flex; justify-content: center; align-items: center; }
+        .modal-img { max-width: 90%; max-height: 90vh; }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- 导航栏（与主页一致） -->
+    <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href=" " class="text-xl font-bold text-gray-800">我的摄影</a >
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="index.html" class="text-gray-600 hover:text-black">主页</a >
+                    <a href="galleries.html" class="text-gray-600 hover:text-black">照片集</a >
+                    <a href="portfolio.html" class="text-gray-600 hover:text-black">精选作品</a >
+                    <a href="about.html" class="text-gray-600 hover:text-black">关于我</a >
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 照片集内容（替换src为你的照片，修改分类名称） -->
+    <div class="pt-24 pb-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- 分类1：旅行风景 -->
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">旅行风景</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
+             <img src="./images/xueshan.jpeg" alt="雪山" class="w-full h-64 object-cover rounded shadow hover:opacity-90 cursor-pointer gallery-img">
+             <img src="./images/hupo.jpg" alt="湖泊" class="w-full h-64 object-cover rounded shadow hover:opacity-90 cursor-pointer gallery-img">
+             <img src="./images/senlin.jpeg" alt="森林" class="w-full h-64 object-cover rounded shadow hover:opacity-90 cursor-pointer gallery-img">
+        </div>
+
+        <!-- 分类2：人像写真 -->
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">人像写真</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
+             <img src="./images/huwairenxiang.jpeg" alt="户外人像" class="w-full h-64 object-cover rounded shadow hover:opacity-90 cursor-pointer gallery-img">
+             <img src="./images/shineirenxiang.jpeg" alt="室内人像" class="w-full h-64 object-cover rounded shadow hover:opacity-90 cursor-pointer gallery-img">
+             <img src="./images/fugurenxiang.jpeg" alt="复古人像" class="w-full h-64 object-cover rounded shadow hover:opacity-90 cursor-pointer gallery-img">
+        </div>
+
+        <!-- 分类3：日常碎片 -->
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">日常碎片</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+             <img src="./images/kafei.jpg" alt="咖啡" class="w-full h-64 object-cover rounded shadow hover:opacity-90 cursor-pointer gallery-img">
+             <img src="./images/maomi.jpg" alt="猫咪" class="w-full h-64 object-cover rounded shadow hover:opacity-90 cursor-pointer gallery-img">
+             <img src="./images/huaduo.jpeg" alt="花朵" class="w-full h-64 object-cover rounded shadow hover:opacity-90 cursor-pointer gallery-img">
+        </div>
+    </div>
+
+    <!-- 照片放大弹窗 -->
+    <div class="modal" id="imgModal">
+         <img src="" alt="放大照片" class="modal-img" id="modalImg">
+    </div>
+
+    <!-- 底部版权 -->
+    <footer class="bg-gray-800 text-white py-6 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>© 2024 我的摄影网站 | 保留所有权利</p >
+        </div>
+    </footer>
+
+    <!-- 照片放大JS -->
+    <script>
+        const modal = document.getElementById('imgModal');
+        const modalImg = document.getElementById('modalImg');
+        const galleryImgs = document.querySelectorAll('.gallery-img');
+        
+        // 点击照片放大
+        galleryImgs.forEach(img => {
+            img.onclick = () => {
+                modal.classList.add('active');
+                modalImg.src = img.src;
+            }
+        });
+        
+        // 点击弹窗关闭
+        modal.onclick = (e) => {
+            if (e.target === modal) modal.classList.remove('active');
+        }
+    </script>
+</body>
+</html>
