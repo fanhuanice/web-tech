@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!-- 统一导航栏片段（供各页面通过 fetch 加载） -->
+<nav class="bg-white shadow-md fixed w-full top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+            <div class="flex items-center">
+                <a href="index.html" class="flex items-center gap-3">
+                    <!-- 简单内联 SVG 作为 logo，避免额外图片文件 -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10 text-gray-800">
+                        <path d="M4 7a2 2 0 00-2 2v8a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2h-3.172a2 2 0 01-1.414-.586l-1.828-1.828A2 2 0 0011.172 4H4z" opacity=".2"/>
+                        <path d="M12 8a4 4 0 100 8 4 4 0 000-8z"/>
+                    </svg>
+                    <span class="text-xl font-bold text-gray-800">拾光纪</span>
+                </a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="index.html" class="text-gray-600 hover:text-black">主页</a>
+                <a href="galleries.html" class="text-gray-600 hover:text-black">照片集</a>
+                <a href="portfolio.html" class="text-gray-600 hover:text-black">精选作品</a>
+                <a href="about.html" class="text-gray-600 hover:text-black">关于我</a>
+            </div>
+        </div>
+    </div>
+</nav>
